@@ -9,7 +9,7 @@ public class Calculator {
             System.out.print("Enter the second whole number: ");
             int secondNumber = scanner.nextInt();
             
-            System.out.print("Enter + for addition or - for subtraction: ");
+            System.out.print("Enter + for addition, - for subtraction, * for multiplication, or / for division: ");
             String operation = scanner.next();
 
             if (operation.equals("+")) {
@@ -18,8 +18,18 @@ public class Calculator {
             } else if (operation.equals("-")) {
                 int result = firstNumber - secondNumber;
                 System.out.println("The result is: " + result);
+            } else if (operation.equals("*")) {
+                int result = firstNumber * secondNumber;
+                System.out.println("The result is: " + result);
+            } else if (operation.equals("/")) {
+                if (secondNumber == 0) {
+                    System.out.println("Cannot divide by zero.");
+                } else {
+                    double result = (double) firstNumber / secondNumber;
+                    System.out.println("The result is: " + result);
+                }
             } else {
-                System.out.println("Invalid operation. Please enter + or -.");
+                System.out.println("Invalid operation. Please enter +, -, *, or /.");
             }
         }
     }

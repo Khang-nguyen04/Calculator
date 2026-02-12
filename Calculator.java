@@ -23,7 +23,7 @@ public class Calculator {
                 System.out.println("The result is: " + result);
             } else if (operation.equals("/")) {
                 if (secondNumber == 0) {
-                    System.out.println("Cannot divide by zero.");
+                    System.out.println("Error: Divide by Zero");
                 } else {
                     double result = firstNumber / secondNumber;
                     System.out.println("The result is: " + result);
